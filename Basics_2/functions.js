@@ -61,7 +61,8 @@ const result = () => {
     // it will result as empty object
 }
 
-// Implicit return basically one liner function without return keyword and curly braces
+// Implicit return basically one liner function without curly braces scope and explicit return keyword 
+// Note - It is necessary to use 'return' keyword when you're using curly braces for defining scope
 const addTwoNumbers = (num1, num2) => (num1 + num2)
 console.log(addTwoNumbers(2, 1));
 
@@ -81,3 +82,5 @@ Anonymous or Named: You can define IIFE as an anonymous function (without a name
     // ANONYMOUS IIFE
     console.log("hello world from arrow function!");
 })() // This also works for arrow functions
+
+
