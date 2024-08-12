@@ -4,7 +4,7 @@ const res = myArr.forEach((item) => {
     return item
 });
 
-console.log(res); // undefined because for loop does not return anything
+console.log(res); // undefined because for loop does not return anything explicitely but returns an array implicitely 
 
 // If you want to filter the values of an array based on some condition then you can use filter which results in form of an array itself
 const res1 = myArr.filter((item) =>( item > 4));

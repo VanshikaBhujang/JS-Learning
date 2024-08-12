@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent)
+    console.log(parent.children); //returns all the children of parent class in form of HTML collection
+    console.log(parent.children[1].innerHTML);
+
+    for(let i = 0; i< parent.children.length; i++){
+        console.log(parent.children[i].innerText);  
+    }
+
+    parent.children[2].style.color = "pink";
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+    const childOne = document.querySelector('.day');
+    console.log(childOne.parentElement);
+    console.log(childOne.nextElementSibling);
+
+    console.log("Nodes: ", parent.childNodes); /* this will result in length of 9 because this also includes line break after each div which is a text node
+    NOTE : Even if multiple line breaks are added between two divs still they'll be counted as one text node. But if a comment is added between two tags then the count will be 2 one text 
+    node for line break and two comment for the added comment.
+    */
+    
+</script>
+</html>
